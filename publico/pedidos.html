@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria DOGTORAS - Reservar Cita</title>
+    <link rel="stylesheet" href="./css/marca.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Reserva de Citas - DOGTORAS</h1>
+        <a href="index.html">← Volver al Inicio</a>
+    </header>
+
+    <main>
+        <form action="/citas" method="POST">
+            <h2>Formulario de Reserva</h2>
+
+            <label for="dueño">Nombre del Dueño:</label>
+            <input type="text" id="dueño" name="dueño" placeholder="Ej: Dueño Ejemplo" required>
+
+            <label for="celular">Celular de Contacto:</label>
+            <input type="tel" id="celular" name="celular" placeholder="Ej: 900000000" required>
+
+            <label for="mascota">Nombre de la Mascota:</label>
+            <input type="text" id="mascota" name="mascota" placeholder="Ej: Firulais" required>
+
+            <label for="servicio">Servicio a Elegir:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">-- Selecciona un servicio --</option>
+                <option value="Consulta General">Consulta General (S/. 50.00)</option>
+                <option value="Vacunación">Vacunación (S/. 70.00)</option>
+                <option value="Baño y Peluquería">Baño y Peluquería (S/. 60.00)</option>
+            </select>
+
+            <label for="fecha">Fecha de la Cita:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora de la Cita:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <div>
+                <input type="checkbox" id="consentimiento" name="consentimiento" required>
+                <label for="consentimiento">Acepto los términos y políticas de privacidad (Ley N.° 29733)</label>
+            </div>
+
+            <button type="submit">Enviar Reserva</button>
+        </form>
+    </main>
+
+    <script src="./js/pedido.js"></script>
+</body>
+</html>
